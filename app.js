@@ -3,7 +3,6 @@ const itemInput = document.getElementById('item-input');
 const itemList = document.getElementById('item-list');
 const clearButton = document.getElementById('clear');
 const itemFilter = document.getElementById('filter');
-const items = itemList.querySelectorAll('li');
 
 
 function addItem(e){
@@ -59,6 +58,7 @@ function clearItems(){
 }
 
 function checkUI(){
+    const items = itemList.querySelectorAll('li');
     if (itemList.length === 0){
         clearButton.style.display = 'none';
         itemFilter.style.display = 'none';
