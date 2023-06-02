@@ -55,7 +55,6 @@ function clearItems(){
     while (itemList.firstChild){
         itemList.removeChild(itemList.firstChild);
     }
-}
 
 function checkUI(){
     const items = itemList.querySelectorAll('li');
