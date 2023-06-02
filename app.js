@@ -2,6 +2,8 @@ const itemForm = document.getElementById('item-form');
 const itemInput = document.getElementById('item-input');
 const itemList = document.getElementById('item-list');
 const clearButton = document.getElementById('clear');
+const itemFilter = document.getElementById('filter');
+
 
 function addItem(e){
     e.preventDefault();
@@ -20,7 +22,12 @@ function addItem(e){
 
     const button = createButton('remove-item btn-link text-red');
     li.appendChild(button);
+
+    // Add li to the DOM
     itemList.appendChild(li);
+
+    checkUI();
+
     itemInput.value = '';
 }
 
@@ -54,6 +61,9 @@ function checkUI(){
     if (itemList.length === 0){
         clearButton.style.display = 'none';
         itemFilter.style.display = 'none';
+    } else {
+        clearButton.style.display = 'block';
+        itemFilter.style.display = 'block';        
     }
 }
 
