@@ -38,8 +38,12 @@ function createIcon(classes){
     return icon;
 }
 
+function removeItem(e){
+    
+}
+
 
 // Event Listeners
 itemForm.addEventListener('submit', addItem);
-
+itemList.addEventListener('click', removeItem);
 
