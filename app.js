@@ -50,9 +50,17 @@ function clearItems(){
     }
 }
 
+function checkUI(){
+    if (itemList.length === 0){
+        clearButton.style.display = 'none';
+        itemFilter.style.display = 'none';
+    }
+}
+
 
 // Event Listeners
 itemForm.addEventListener('submit', addItem);
 itemList.addEventListener('click', removeItem);
 clearButton.addEventListener('click', clearItems);
 
+checkUI();
