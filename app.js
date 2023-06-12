@@ -47,6 +47,7 @@ function addItemToStorage(item) {
     itemsFromStorage.push(item);
 
     // Convert to JSON string and set to local storage
+    localStorage.setItem('items', JSON.stringify(itemsFromStorage));
 }
 
 function createButton(classes){
