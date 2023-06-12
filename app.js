@@ -27,7 +27,7 @@ function onAddItemSubmit(e){
     itemInput.value = '';
 }
 
-function addItemToDOM(item) {
+function addItemToDOM(item){
      // Create list item
      const li = document.createElement('li');
      li.appendChild(document.createTextNode(item));
@@ -39,7 +39,7 @@ function addItemToDOM(item) {
      itemList.appendChild(li);
 }
 
-function addItemToStorage(item) {
+function addItemToStorage(item){
     let itemsFromStorage;
 
     if (localStorage.getItem('items') === null) {
