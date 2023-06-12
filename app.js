@@ -58,7 +58,7 @@ function clearItems(){
 }
 
 function filterItems(e){
-    const text = e.target.value;
+    const text = e.target.value.toLowerCase();
 
     console.log(text);
 }
