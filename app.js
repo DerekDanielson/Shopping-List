@@ -55,9 +55,12 @@ function clearItems(){
     while (itemList.firstChild){
         itemList.removeChild(itemList.firstChild);
     }
+}
 
 function filterItems(e){
     const text = e.target.value;
+
+    console.log(text);
 }
 
     function checkUI(){
