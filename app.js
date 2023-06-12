@@ -16,7 +16,11 @@ function onAddItemSubmit(e){
         return;
     }
 
+    // Create item DOM element
     addItemToDOM(newItem);
+
+    // Add item to local storage
+    addItemToStorage(newItem);
 
     checkUI();
 
@@ -44,6 +48,7 @@ function addItemToStorage(item) {
         itemsFromStorage = JSON.parse(localStorage.getItem('items'));
     }
 
+    // Add new item to array
     itemsFromStorage.push(item);
 
     // Convert to JSON string and set to local storage
