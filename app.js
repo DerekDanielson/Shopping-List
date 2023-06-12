@@ -56,7 +56,11 @@ function clearItems(){
         itemList.removeChild(itemList.firstChild);
     }
 
-function checkUI(){
+function filterItems(e){
+    const text = e.target.value;
+}
+
+    function checkUI(){
     const items = itemList.querySelectorAll('li');
     if (itemList.length === 0){
         clearButton.style.display = 'none';
@@ -72,5 +76,6 @@ function checkUI(){
 itemForm.addEventListener('submit', addItem);
 itemList.addEventListener('click', removeItem);
 clearButton.addEventListener('click', clearItems);
+itemFilter.addEventListener('input', filterItems);
 
 checkUI();
