@@ -89,7 +89,7 @@ function onClickItem(e){
 }
 
 function removeItem(item){
-    
+    item.remove();
 }
 
 function clearItems(){
