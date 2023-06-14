@@ -121,6 +121,8 @@ function filterItems(e){
 }
 
 
+// Initialize app
+function init(){
 // Event Listeners
 itemForm.addEventListener('submit', onAddItemSubmit);
 itemList.addEventListener('click', removeItem);
@@ -129,3 +131,6 @@ itemFilter.addEventListener('input', filterItems);
 document.addEventListener('DOMContentLoaded', displayItems);
 
 checkUI();
+}
+
+init();
