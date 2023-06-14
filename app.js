@@ -89,13 +89,30 @@ function onClickItem(e){
 }
 
 function removeItem(item){
+    // Remove item from DOM
     item.remove();
+
+    // Remove item from storage
+    removeItemFromStorage(item.textContent);
+
+    checkUI();
+}
+
+function removeItemFromStorage(item){
+    let itemsFromStorage = getItemsFromStorage();
+
+    // Filter out item to be removed
+    itemsFromStorage = itemsFromStorage.filter((i) => i !== item);
+
+    // Re-set to localstorage
+    localStorage.setItem('items', JSON.stringify(itemsFromStorage));
 }
 
 function clearItems(){
     while (itemList.firstChild){
         itemList.removeChild(itemList.firstChild);
     }
+    checkUI();
 }
 
 function filterItems(e){
