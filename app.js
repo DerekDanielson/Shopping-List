@@ -7,8 +7,9 @@ const itemFilter = document.getElementById('filter');
 
 function displayItems(){
     const itemsFromStorage = getItemsFromStorage();
-
     itemsFromStorage.forEach(item => addItemToDOM(item));
+
+    checkUI();
 }
 
 function onAddItemSubmit(e){
