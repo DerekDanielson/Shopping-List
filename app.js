@@ -82,10 +82,14 @@ function getItemsFromStorage(){
     return itemsFromStorage;
 }
 
-function removeItem(e){
-    if (e.target.parentElement.classList.contains('remove-item')){
-        e.target.parentElement.parentElement.remove();
+function onClickItem(e){
+    if (e.target.parentElement.classList.contains('remove-item')) {
+        removeItem(e.target.parentElement.parentElement);
     }
+}
+
+function removeItem(item){
+    
 }
 
 function clearItems(){
