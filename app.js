@@ -69,6 +69,10 @@ function addItemToStorage(item){
     localStorage.setItem('items', JSON.stringify(itemsFromStorage));
 }
 
+function getItemsFromStorage(){
+    
+}
+
 function removeItem(e){
     if (e.target.parentElement.classList.contains('remove-item')){
         e.target.parentElement.parentElement.remove();
