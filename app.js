@@ -60,7 +60,7 @@ function createIcon(classes){
     return icon;
 }
 
-function addItemToStorage(item){
+function addItemsToStorage(item){
     const itemsFromStorage = getItemsFromStorage;
 
     // Add new item to array
@@ -125,7 +125,7 @@ function filterItems(e){
 function init(){
 // Event Listeners
 itemForm.addEventListener('submit', onAddItemSubmit);
-itemList.addEventListener('click', removeItem);
+itemList.addEventListener('click', onClickItem);
 clearButton.addEventListener('click', clearItems);
 itemFilter.addEventListener('input', filterItems);
 document.addEventListener('DOMContentLoaded', displayItems);
