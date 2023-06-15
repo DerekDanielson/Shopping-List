@@ -27,7 +27,7 @@ function onAddItemSubmit(e){
     addItemToDOM(newItem);
 
     // Add item to local storage
-    addItemToStorage(newItem);
+    addItemsToStorage(newItem);
 
     checkUI();
 
@@ -134,7 +134,7 @@ function filterItems(e){
     });
 }
 
-    function checkUI(){
+function checkUI(){
     const items = itemList.querySelectorAll('li');
     if (itemList.length === 0){
         clearButton.style.display = 'none';
@@ -144,7 +144,6 @@ function filterItems(e){
         itemFilter.style.display = 'block';        
     }
 }
-
 
 // Initialize app
 function init(){
