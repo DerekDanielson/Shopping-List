@@ -147,6 +147,7 @@ function checkUI(){
 
 // Initialize app
 function init(){
+
 // Event Listeners
 itemForm.addEventListener('submit', onAddItemSubmit);
 itemList.addEventListener('click', onClickItem);
