@@ -3,6 +3,7 @@ const itemInput = document.getElementById('item-input');
 const itemList = document.getElementById('item-list');
 const clearButton = document.getElementById('clear');
 const itemFilter = document.getElementById('filter');
+let isEditMode = false;
 
 
 function displayItems(){
@@ -85,6 +86,8 @@ function getItemsFromStorage(){
 function onClickItem(e){
     if (e.target.parentElement.classList.contains('remove-item')) {
         removeItem(e.target.parentElement.parentElement);
+    } else {
+        
     }
 }
 
